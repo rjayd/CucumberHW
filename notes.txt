@@ -1,0 +1,40 @@
+Given - precondition/prerequisite
+When - perform action
+And - supporting tag that can be used with all other tags
+Then - expected output
+
+Who writes Acceptance criteria? - BA
+
+Who uses Gherkin?
+
+BA -
+QA -
+
+US - 123321 - Admin should be able to search an employee in HRMS application
+
+Acceptance Criteria
+	1. search by id
+	2. search by name
+
+1.
+Given user opens browser and navigated to HRMS
+And user logged in as an admin
+And user is on employee list page
+When user enters valid employee ID
+And user clicks on search button
+Then user see employee in the employee table
+
+2.
+Given user opens browser and navigated to HRMS
+And user logged in as an admin
+And user is on employee list page
+When user enters first name and last name
+And user clicks on search button
+Then user see employee in the employee table
+
+user story -verify login functionality
+
+Acceptance criteria -
+- valid admin login
+- valid ess login
+- valid username and invalid password
