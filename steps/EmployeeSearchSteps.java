@@ -1,11 +1,8 @@
 package steps;
 
-import io.cucumber.java.an.E;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.commons.logging.Log;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pages.DashboardPage;
@@ -17,10 +14,6 @@ import utils.ConfigReader;
 import java.util.List;
 
 public class EmployeeSearchSteps extends CommonMethods {
-    @Given("user is navigated to HRMS")
-    public void user_is_navigated_to_hrms() {
-        openBrowser();
-    }
 
     @Given("user is logged in with valid admin credentials")
     public void user_is_logged_in_with_valid_admin_credentials(){

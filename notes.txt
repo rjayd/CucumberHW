@@ -38,3 +38,61 @@ Acceptance criteria -
 - valid admin login
 - valid ess login
 - valid username and invalid password
+
+what is step definition?
+Step definition is the code implemented for the steps mentioned in feature file
+
+Test runner
+we use test runner to execute all features in multiple combinations
+
+features = we define the path of our feature file here
+glue = we define the path of our steps here
+dryRun = when it is set to true, it stops the actual execution and scan all the steps
+strict = true, it checks all the steps definition
+monochrome = it removes all unreadable characters from the console output
+tags = we can segregate scenario based on tags and can execute them accordingly
+
+@RunWith - junit
+@CucumberOptions - features, glue,dryRun, monochrome, strict
+
+hooks - @Before - we use this to define pre conditions
+        @After - we use this to define post conditions
+
+What is the difference between hooks and background?
+Background is feature file specific which will be limited to a feature
+Hooks are applicable for all the scenarios available in features
+
+Data driven test -
+Background - in a specific feature file, if we have common steps for all the scenarios, we write them in feature file
+Hooks is applicable to all the features whereas background is limited to one specific feature file
+
+Scenario and Scenario Outline difference-
+When we use examples table for data driven testing, we use scenario outline instead of scenario
+
+Data table -
+
+HW - User should be able to modify employee personal details
+
+Driver's license number
+License exp date
+SSN
+SIN
+Gender
+Marital Status
+Nationality
+DOB
+Nickname
+Smoker
+Military Service
+
+DataTable as list - when we don't provide headers in the table
+
+excel reading example for adding the employees
+plugins - "pretty" is responsible to print all the steps in the console
+html plugin generates cucumber.html report in target folder
+takeScreenshot Method - we use Scenario in the hooks that accepts array
+    of byte that's why we changed takescreenshots method in common methods class
+cucumber maven report- it generates json report in target under cucumber-html-report
+
+mvn test -Dcucumber.options="--tags @test"
+mvn clean verify -Dcucumber.filter.tags="@test"
